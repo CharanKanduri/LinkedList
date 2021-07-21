@@ -16,6 +16,8 @@ namespace LinkedList
             obj.pop();
             Console.WriteLine("\nAfter Pop");
             obj.Display();
+            int searchValue = obj.SearchData(30);
+            Console.WriteLine(searchValue);
 
         }
     }
