@@ -56,8 +56,10 @@ namespace LinkedList
 
         public void pop()
         {
-            Console.WriteLine("\nPoped element is: {0}", head.data);
-            this.head = this.head.next;
+            Console.WriteLine("\n*****Delete Last node*****");
+            Node temp = GetLastNode();
+            Console.WriteLine("Poped element is: {0}", temp.next.data);
+            temp.next = null;
             Display();
         }
         //To get Last Node
