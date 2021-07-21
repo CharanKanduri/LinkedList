@@ -9,9 +9,9 @@ namespace LinkedList
             Console.WriteLine("Welcome to LinkedList Operations program");
             OperationsOnLinkedList obj = new OperationsOnLinkedList();
             //Insertion Operation
-            obj.InsertAtFirst(70);
-            obj.InsertAtFirst(30);
-            obj.InsertAtFirst(56);
+            obj.InsertLast(56);
+            obj.InsertLast(30);
+            obj.InsertLast(70);
             //Display Operation
             Console.WriteLine("*****Insertion at First*****");
             obj.Display();

@@ -8,19 +8,18 @@ namespace LinkedList
     {
         public Node head;
         //Insert data to Last
-        public void InsertAtFirst(int data)
+        public void InsertLast(int data)
         {
             Node newNode = new Node(data);
-            if (this.head == null)
+            if (head == null)
             {
-                head = newNode;
+                this.head = newNode;
             }
             else
             {
-                newNode.next = head;
-                head = newNode;
+                Node lastNode = GetLastNode();
+                lastNode.next = newNode;
             }
-
         }
         //To get Last Node
         public Node GetLastNode()
