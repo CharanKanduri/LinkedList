@@ -8,17 +8,49 @@ namespace LinkedList
     {
         public Node head;
         //Insert data to Last
-        public void InsertLast(int data)
+        public void InsertAtFirst(int data)
         {
             Node newNode = new Node(data);
-            if (head == null)
+            if (this.head == null)
             {
-                this.head = newNode;
+                head = newNode;
             }
             else
             {
-                Node lastNode = GetLastNode();
-                lastNode.next = newNode;
+                newNode.next = head;
+                head = newNode;
+            }
+
+        }
+        public void InsertInBetween(int position, int data)
+        {
+            Node newNode = new Node(data);
+            if (position == 1)
+            {
+                newNode.next = this.head;
+                head = newNode;
+            }
+            else if (position < 1)
+            {
+                Console.WriteLine(" Value less than 1! Invalid Position.");
+            }
+            else if (position > 0)
+            {
+                Node temp = head;
+                while (position >= 0)
+                {
+                    if (position == 2)
+                    {
+                        Console.WriteLine("\n******After inserting in between Two nodes***** ");
+                        newNode.next = temp.next;
+                        temp.next = newNode;
+                        break;
+                    }
+                    temp = temp.next;
+                    Console.WriteLine(position);
+                    position--;
+                }
+
             }
         }
         //To get Last Node
