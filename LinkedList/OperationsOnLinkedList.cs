@@ -53,6 +53,13 @@ namespace LinkedList
 
             }
         }
+
+        public void pop()
+        {
+            Console.WriteLine("\nPoped element is: {0}", head.data);
+            this.head = this.head.next;
+            Display();
+        }
         //To get Last Node
         public Node GetLastNode()
         {

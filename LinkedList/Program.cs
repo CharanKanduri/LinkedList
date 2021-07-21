@@ -10,11 +10,11 @@ namespace LinkedList
             OperationsOnLinkedList obj = new OperationsOnLinkedList();
             //Insertion Operation
             obj.InsertAtFirst(70);
+            obj.InsertAtFirst(30);
             obj.InsertAtFirst(56);
             obj.Display();
-            obj.InsertInBetween(2,30);
-            //Display Operation
-            Console.WriteLine("*****Insertion at Middle*****");
+            obj.pop();
+            Console.WriteLine("\nAfter Pop");
             obj.Display();
 
         }
